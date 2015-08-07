@@ -1,0 +1,44 @@
+.bios{
+		
+	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+	/* /dv-changes */
+
+	padding:0 0 0 0;
+	canvas#characters{
+		width:100%;
+		height:auto;
+		overflow:visible;
+		max-width:620px;
+	}
+
+	#character-text{
+		color:#fff;
+		// border:1px solid #0f0;
+		position:absolute;
+		// top:380px;
+		// left:125px;
+		top: 50%;
+		transform: translateY(-50%) rotate(5deg);
+		top:73%;/* dv-change (to better center the text vertically) */
+
+		transform: translate(-50%, -50%) rotate(5deg);
+		left:50%;
+
+		margin-bottom:-200px;
+		width:55%;
+
+		h1{
+
+			font-size:5rem;
+			text-align: center;
+			font-weight: bold;
+			font-family: $Monstro !important;
+			margin-bottom:1rem;
+		}
+		p{
+			line-height: 120%;
+		}
+	}
+}

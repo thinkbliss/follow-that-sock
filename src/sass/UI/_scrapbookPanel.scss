@@ -1,0 +1,211 @@
+#scapBookModal{
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100% !important;
+	background-color:rgba(0,0,0,.3);
+	z-index:100;
+	display:block;
+	content:' ';
+}
+
+@keyframes irwinPicPop {
+   from { background-position: -2px -2px}
+	 to {  background-position: -2292px -2px}
+}
+
+
+
+#scrapbookPanel {
+	margin-top:-37px;
+	padding-top:80px;
+	padding-left:40px;
+	padding-right:40px;
+	padding-bottom: 90px;
+	/* dv-changed added the following 2 lines in order to get the footer under this panel */
+	position:relative;
+	z-index: 12;
+	background: transparent url(../img/bg-scrapbook-panel.png) repeat-x 0 0;
+	.irwinHole {
+		width: 100%;
+		// static placeholder until we animate
+		.irwin {
+			position: absolute;
+			bottom: 95px;
+			right: 25px;
+			width:227px; 
+			height:276px;
+			overflow:hidden;
+			background: transparent url(../img/seq-irwin-002.png) no-repeat right 0;
+			background-position: -2px -2px;
+			&.animate{
+				animation: irwinPicPop .8s steps(10) forwards;
+				visibility: visible;
+  				animation-play-state: play;	
+			}
+		}
+	}
+	.scrap-column{
+		width:50%;
+		display:inline-block;
+		border:1px solid #0f0;
+		float:left;
+		box-sizing:border-box;
+	}
+	.row{
+		&::after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+	.scrapbookContainer {
+		margin-top: 82px;
+        height: 540px;
+        padding-bottom: 70px;
+        position: relative;
+		.backgroundIcon {
+			position: absolute;
+			top: -220px;
+			left: 35%;
+		}
+		.backgroundBook {
+			position: absolute;
+			top: -10px;
+			left: 0;
+
+            a { width: 82px; height: 99px; display: inline-block; background: transparent url(../img/sprite-buttons.png) no-repeat 0 0; }
+            a.prevArrow { 
+            	display: none; 
+            	position: absolute; 
+            	left: 0; 
+            	top: 45%; 
+            	background-position: -39px -111px;
+            	z-index: 5;
+            	&:hover { background-position: -146px -111px; }
+            }
+            a.nextArrow { 
+            	display: none; 
+            	position: absolute; 
+            	right: -20px;  
+            	top: 36%; 
+            	background-position: -137px -210px;background-position: -19px -210px; 
+            	z-index: 5;
+            	&:hover { background-position: -137px -210px; }
+            }
+            .bgScrapbook { width: 100% !important; }
+
+		}
+		.scrapbook {
+			.lb-album {
+				width: 93%;
+				margin: 0 7% 0 0;
+				padding-top: 8%;
+				li {
+					width: 50%;
+					margin: 0;
+					.pic {
+						position: relative;
+						max-width: 268px;
+						a {
+							img {
+								width: 100%;
+								max-width: 268px;
+							}
+						}
+					}
+					.lightBoxDetails {
+						p {
+							width: 310px;
+							margin-top: 15px;
+						}
+						ul.social {
+							margin-top: 0;
+							li {
+								margin: 0;
+								a {
+									margin-top: 10px;
+									margin-left: 40px;
+								}
+							}
+						}
+					}
+				}
+				li:first-child .pic { margin-left: 28%;}
+				li:nth-child(2n) .pic { margin-left: 20%; transform: rotate(355deg); }
+				li:nth-child(3n) .pic { margin-left: 28%; margin-top: 8%; transform: rotate(355deg); }
+				li:nth-child(4n) .pic { margin-left: 20%; transform: rotate(2deg); }
+
+                .selfieBadge { width: 100% !important; position: absolute; top: 80%; left: -8%; z-index: 50; }
+                .topLeftCorner, .topLeftCorner002, .bottomRightCorner, .topLeftStrip, .topRightCorner, .topRightCorner002, .bottomLeftStrip, .bottomRightStrip {
+                	position: absolute;
+                	z-index: 10;
+                	img {
+                		width: auto;
+                	}
+                }
+                .topLeftCorner { top: -2%; left: -2%; }
+                .topLeftCorner002 { top: -2%; left: -2%; }
+                .bottomRightCorner { bottom: -2px; right: -3px; }
+                .topLeftStrip {  top: -10%; left: -6%; }
+                .topRightCorner { top: -4px; right: -3px; }
+                .topRightCorner002 { top: -5%; right: -2%; }
+                .bottomLeftStrip {  bottom: -8%; left: -8%; }
+                .bottomRightStrip { bottom: -8%; right: -5%; }
+			}
+		}
+	}
+
+	.descriptionContainer {
+
+		.textureFill {
+			padding-top: 30px;
+
+			h2 {
+				// force line break to match comp
+				width: 60%;
+				transform: rotate(2deg);
+			}
+			p {
+				width: 70%;
+				margin-top: 10px;
+			}
+
+		}
+	}
+}
+
+// Breakpoint to ensure 1024px is presentable
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+	#scrapbookPanel {
+
+		.scrapbookContainer {
+
+			.scrapbook {
+
+				.lb-album {
+					padding-top: 10%;
+					li {
+						width: 40%;
+						margin: 0 0 0 8%;
+					} 	li:first-child .pic { margin-left: 28%;}
+					li:nth-child(2n) .pic { margin-left: 23%; }
+					li:nth-child(3n) .pic { margin-left: 28%; margin-top: 8%;}
+					li:nth-child(4n) .pic { margin-left: 23%; }
+
+				}
+			}
+		}
+		.descriptionContainer {
+
+			.textureFill {
+
+				p {
+					width: 100%;
+				}
+
+			}
+		}
+	}
+}

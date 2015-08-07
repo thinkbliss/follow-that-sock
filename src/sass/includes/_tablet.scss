@@ -1,0 +1,245 @@
+@media only screen and (min-width: 415px) and (max-width: 768px) {
+	h2 { font-size: 4.3rem !important; }	    
+	.backgroundIcon { display: none !important; }
+    .butnEntry { min-width: 160px; 
+    	margin-top: -51px !important; 
+    	position: relative; 
+    	display: inline-block; 
+    	background: transparent url(../img/bg-form-butn-mobile.png) no-repeat 0 0; 
+    	background-size: 100%; 
+    	font-size: 1.6rem; 
+    	&:hover { background-position: 0 0 !important;}
+
+    }
+    .descriptionContainer { 
+        margin: 20% 0 0 0 !important;
+        h2 { text-align: center; -webkit-transform: rotate(-2deg); }
+        p { text-align: center; }
+        .textureFill { -webkit-transform: rotate(0deg) !important; }    
+    }
+	.topPane {
+		margin-top: 20px;
+	}
+
+    .entryPanel {
+         background-image: none,none,url(../img/bg-entry-panel.png);
+        .row {
+            padding: 0 10px;
+            box-sizing: border-box;
+            .dashboardContainer {
+                padding-left: 2%;
+                input[type="text"], input[type="email"] { width: 90%; height: 37px; }
+                button { padding: 12px; }
+                h3 { 
+                    font-size: 2.4rem; 
+                }
+                .signedOut {
+                    .butnEntry { 
+                        margin: 0 !important; 
+                        padding-top: 23px;  
+                        padding-left: 7px;
+                        padding-right: 9px;
+                        float: right; 
+                    }
+                    h4 { width: 50%; font-size: 3rem;  text-align: right; }
+                    .registerButnContainer { 
+                        margin: 0 !important;
+                        h4 { padding-top: 40px; padding-left: 1%; transform: rotate(-1deg) !important; }
+                        .butnEntry { margin-top: -66px !important; z-index: 101; }
+                     }
+                    .signinButnContainer { 
+                        margin: 0 !important;
+                        h4 { margin-top: 20px; }
+                        .butnEntry { margin-top: -40px !important; z-index: 101; }
+                     }
+                }
+                .dashboard {
+                    padding: 20px 26px !important;
+                    background: url(../img/bg-mobile-dash.png) no-repeat 0 0;
+                    background-size: 100%;
+                    .accountInfo {
+                        .info {
+                            p { margin: 30px 0 !important; font-size: 1.5rem; } 
+                        }
+                    }
+                    .entryCounter {
+                        width: 100%;
+                        background-size: 69% !important;
+                        position: relative;
+                        left: 15%;
+                        top: 108px;
+                        background: url(../img/bg-mobile-entries.png)no-repeat; 
+                        text-align: left;
+                        .count {
+                            left: 38%;
+                            top: 13%;
+                            font-size: 3rem;
+                        }
+                        .entry {
+                            p {
+                                position: absolute;
+                                top: 14px;
+                                left: 87px;
+                                font-size: 2rem;
+                            }
+                        }
+                        p.blockText { display: none; }
+                        p { font-size: 1.3rem; }
+                    }
+                }
+                .dashForms {
+                    padding: 30px 25px;
+                    background: url(../img/bg-mobile-dash.png)no-repeat;
+                    background-size: 100% 100%;
+                    form { 
+                        margin-top: 0 !important; 
+                        label { margin-left: 24px !important; }
+                    }
+                    &#dashMMS { 
+                        padding-bottom: 100px;
+                        button { position: absolute; top: 83%; left: 30%; }
+                    }                    
+                    .signedIn {
+                        padding: 0 !important;
+                        background: url(../img/bg-mobile-dash.png)no-repeat center 0;
+                        .accountInfo { 
+                            p {}
+                            ul.social {
+                                li {  }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    .row.weeklyWinners { 
+        padding: 0 10px !important;
+        box-sizing: border-box;
+        margin-top: 0 !important; 
+        text-align: center; }
+    }
+    .familyBioPanel {
+    	padding-bottom: 70px;
+    	.fam-row { overflow: visible; }
+    	.fam-column {
+    		&.descriptionContainer { 
+    			width: 47% !important;
+    			padding-top: 62px;
+    			padding-left: 20px;
+    		}
+    	}
+    	.bios { top: 64%; z-index: 20; }
+    	&::before {
+  			content: "";
+  		}
+    }
+    .irwinPopWrapper, .irwinHole { display: none !important; }
+    .scrapbook {
+    	width: 89%;
+  		margin-left: 40px;
+    }
+   	.scrapbookContainer {
+		width: 97% !important;
+		margin-top: 13px !important;
+		top: 470px;
+	}
+    .scrapbookPanel {
+    	margin-top: -19px;
+    	padding-bottom: 290px !important;
+    	.mainScrapbookContent { 
+    		margin-top: -543px !important;
+    		.descriptionContainer { 
+    			position: relative; 
+    			top: 279px; 
+    			left: 103px;
+    		}
+    	}
+	}
+	#scrapbookPanel {  
+	    .mainScrapbookContent { 
+			margin-top: -543px !important;
+			padding-bottom: 290px !important;
+			.descriptionContainer { 
+				position: relative; 
+				top: 279px; 
+			}
+		}
+		.mainScrapbookContent {
+			.three {
+				&.columns {  width: 100%;}
+			}
+		}
+	}
+	.familyBioPanel .bios #character-text {
+		h1  { font-size: 2.8rem; }
+		p { font-size: 1rem; }
+  	}
+    
+
+    .overlay-inner {
+        margin: 0 !important;
+        padding: 0 !important;
+        form.register { 
+            min-width: 90% !important;
+            margin-top: 30px;
+            margin-left: 0;
+            padding: 55px 20px 40px 80px; 
+            background: transparent url(../img/bg-mobile-registration.png) no-repeat center 0; 
+            background-size: 90%;
+            .overlay-close { margin-left: 77%; top: 0 !important; }
+        }
+        form.signIn {
+            min-width: 90% !important;
+            margin-top: 30px;
+            margin-left: 0;
+            padding: 81px 20px 0 66px; 
+            background: transparent url(../img/bg-mobile-signin.png) no-repeat center 0; 
+            background-size: 90%;
+            .overlay-close { margin-left: 77%; top: 0 !important; }
+        }
+        .howItWorksModal {
+            background: transparent url(../img/bg-mobile-how.png) no-repeat center 0 !important;
+            background-size: 90% !important;
+            .howItWorksModalContent {
+                min-width: 75%;
+                padding: 27px 100px 31% 49px;
+                background: none;
+                background-size: 90% !important;
+                p, li { font-size: 1.3rem; }
+                .butnEntry {
+                    padding: 16px 0;
+                    position: absolute !important;
+                    top: 78% !important;
+                    left: 32%;
+                }
+                .overlay-close { 
+                    margin: -73px 0 0 67%; 
+                    top: 103px;
+                }
+            }
+        }
+        .termsAndConditionsModal {
+            background: transparent url(../img/bg-mobile-terms.png) no-repeat center 0 !important;
+            background-size: 90% !important;
+            .termsAndConditionsModalContent {
+                min-width: 75%;
+                padding: 27px 100px 31% 49px;
+                background: none;
+                background-size: 90% !important;
+                p, li { font-size: 1.3rem; }
+                .butnEntry {
+                    padding: 16px 0;
+                    position: absolute !important;
+                    top: 78% !important;
+                    left: 32%;
+                }
+                .overlay-close { 
+                    margin: -73px 0 0 67%; 
+                    top: 103px;
+                }
+            }
+        }
+    }
+
+}
+

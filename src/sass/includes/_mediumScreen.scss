@@ -1,0 +1,221 @@
+
+@media only screen and (min-width: 769px) and (max-width: 1400px) {
+	h2 { 
+		padding-bottom: 1.2rem; 
+		font-size: $largeTextSize-ipad !important; 
+		font-weight: $boldText; 
+		letter-spacing: .08rem; 
+		line-height: 90%; 
+		padding-bottom:20px;
+	}
+	h3 { font-size: $mediumTextSize-ipad; }
+	h4 { font-size: $regularTextSize-ipad; }
+	p { 
+		font-size: $regularTextSize-ipad; 
+		line-height: 130% !important;
+	} 
+	.butnEntry { 
+		font-size:2.6rem;
+		min-width:210px;
+		padding:24px 0px;
+		background-position:-9px -10px;
+		background-image: url(../img/sprite-buttons-ipad.png);
+		&:hover{
+			background-position: -238px -10px;
+		}
+	}
+	.entryPanel{
+		background-position:
+		127% 10%,
+		-10% 90%,
+		left top;
+		.row {
+			padding: 80px 40px 10px 40px;
+			// border:1px solid #f00;
+			max-width:1200px;
+			box-sizing:border-box;
+
+		}
+		.descriptionContainer{
+			margin-top: 20px;
+        	margin-left: 0px;
+        	margin-bottom:20px;
+			// border:1px solid #f00;
+		}
+		.dashboardContainer {
+			text-align:center;
+			padding:0 0 0 0;
+			/*border:1px solid #00f;*/
+
+			.signedOut{
+
+				text-align: left;
+				/*border:1px solid #0f0;*/
+				display:inline-block;
+				padding-top:20px;
+
+				h4 { 
+					font-size: 2.5rem !important;
+				}
+				.registerButnContainer{
+					margin:0 0 0 20px;
+				}
+				.signinButnContainer{
+					.butnEntry { 
+						margin: 10px 0 0 20px; 
+					}
+					margin: 15px 0 0 150px;
+				}
+			}
+			.signedIn {
+				/*border:1px solid #0f0;*/
+				background-size: 100%;
+				.entryCounter {
+					.entry{
+						padding: 10px 0 20px;
+					}
+				}
+			}
+			.dashForms{
+				text-align: left;
+				/*border:1px solid black;
+				width: 710px;
+				padding: 40px 0 60px 55px;
+				position: relative;
+				display: inline-block;
+				background: transparent url(../img/bg-dashboard.png) no-repeat 0 0;
+				h3{
+					padding:0 0 10px 0;
+				}
+	            form { 
+	            	margin-top: -10px !important; 
+				}
+	            .checkboxGroup { 
+	            	padding:10px 0 0;
+	            	width: 93%; 
+	            }
+	            label { 
+	            	margin-top: -14px; 
+	            	margin-left: 50px; 
+	            	display: block; 
+	            	color: $white; 
+	            	font-size: $smallText; 
+	            	font-weight: 900; 
+	            	line-height: 1.6rem; 
+	            }
+	            span.message { 
+	            	width: 89%; 
+	            	margin-top: 10px; 
+	            	display: block; 
+	            	color: $white; 
+	            	font-size: $smallText; 
+	            	font-weight: 900; 
+	            	line-height: 1.6rem; 
+	            }*/
+			}
+
+
+		}
+	} 
+	.familyBioPanel{
+		// border:1px solid #00f;
+		.irwinPopWrapper {
+			// border:1px solid #0f0;
+			// display:none;
+		}
+		.characterCopy{
+			// border:1px solid #f00;
+		}
+		.bios{
+			// border:1px solid #0f0;
+			// overflow:hidden;
+			// width:100%;
+			#character-text{
+				h1{
+					font-size:3rem;
+				}
+				p{
+					font-size:1rem;
+				}
+			}
+			// #characters{
+			// 	width:100%;
+			// 	height:auto;
+			// }
+		}
+	}
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+	    .overlay-inner {
+        margin: 0 !important;
+        padding: 0 !important;
+        form.register { 
+            min-width: 90% !important;
+            margin-top: 30px;
+            margin-left: 0;
+            padding: 20px 20px 50px 20px; 
+            background: transparent url(../img/bg-mobile-registration.png) no-repeat center 0; 
+            background-size: 90%;
+            .overlay-close { margin-left: 77%; top: 0 !important; }
+        }
+        form.signIn {
+            min-width: 90% !important;
+            margin-top: 30px;
+            margin-left: 0;
+            padding: 20px; 
+            background: transparent url(../img/bg-mobile-signin.png) no-repeat center 0; 
+            background-size: 90%;
+            .overlay-close { margin-left: 77%; top: 0 !important; }
+        }
+        .howItWorksModal {
+            background: transparent url(../img/bg-mobile-how.png) no-repeat center 0 !important;
+            background-size: 90% !important;
+            .howItWorksModalContent {
+                min-width: 75%;
+                padding: 27px 100px 31% 49px;
+                background: none;
+                background-size: 90% !important;
+                p, li { font-size: 1.3rem; }
+                .butnEntry {
+                    padding: 16px 0;
+                    position: relative !important;
+                    top: 44% !important;
+                    left: 28%;
+                }
+                .overlay-close { 
+                    margin: -73px 0 0 67%; 
+                    top: 103px;
+                }
+            }
+        }
+        .termsAndConditionsModal {
+            background: transparent url(../img/bg-mobile-terms.png) no-repeat center 0 !important;
+            background-size: 90% !important;
+            .termsAndConditionsModalContent {
+                min-width: 75%;
+                padding: 27px 100px 31% 49px;
+                background: none;
+                background-size: 90% !important;
+                p, li { font-size: 1.3rem; }
+                .butnEntry {
+                    padding: 16px 0;
+                    position: absolute !important;
+                    top: 78% !important;
+                    left: 32%;
+                }
+                .overlay-close { 
+                    margin: -73px 0 0 67%; 
+                    top: 103px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

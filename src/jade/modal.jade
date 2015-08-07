@@ -1,0 +1,114 @@
+.modal.modal-1
+	span.modal-overlay
+	.modal-content
+		form#dja-regform.validate-form.register(action="")
+			a.closeForm.close(href="#close", title="Close")
+			h2 REGISTER
+			ul
+				li.field.input-holder
+					input(class="medium input inputBg dja-validate", type="text", name="dja-fname", placeholder="FIRST NAME")
+					input(class="medium input dja-validate", type="text", name="dja-lname" placeholder="LAST NAME")
+				li.field.input-holder
+					input(class="medium input dja-validate", type="text", name="dja-email", placeholder="EMAIL ADDRESS")
+					select(name="under18" class="dja-validate")
+						option(value="Over 21") Age Group
+				li.field.input-holder
+					input(class="medium input dja-validate", type="text", name="dja-addr1", placeholder="ADDRESS 1")
+					input(class="medium input", type="text", name="dja-addr2", placeholder="ADDRESS 2")
+				li.field.input-holder
+					input(class="medium input dja-validate", type="text", name="dja-city", placeholder="CITY")
+				li.field.input-holder
+					select(name="dja-state", class="dja-validate")
+						option(value="AK") AK
+						option(value="CA") CA
+					input(class="short input dja-validate", type="text", name="dja-zip", placeholder="ZIP CODE")
+				li.field.input-holder
+					input(class="medium input dja-validate", type="text", name="dja-pass", placeholder="PASSWORD", required)
+					input(class="medium input dja-validate", type="text", name="dja-confimpass", placeholder="CONFIRM PASSWORD", required)
+			.checkboxGroup
+				ul
+					li
+						input(type="checkbox", id="dja-agreeRules", name="dja-agreeRules", class="required dja-validate") 
+						label I agree with contest 
+							a(href="javascript:void(0)") Rules and Conditions
+					li
+						input(type="checkbox" id="dja-optin1" name="dja-optin1")
+						label Yes I would like to receive emails and special offers from Hanes.com.
+					li
+						input(type="checkbox" id="dja-optin2" name="dja-optin2")
+						label I would like to receive occasional updates, special offers and other information from the Walt Disney family of companies about their products and services.
+			a.registerSubmit.butnEntry(href="#close", title="Close") 
+				span SUBMIT				
+.modal.modal-2
+	span.modal-overlay
+	.modal-content
+		.formSigninContainer<!-- sign in - hidden with modal -->
+			form.signIn(id="dja-signInForm" action="")
+				a.closeForm.close(href="#close", title="Close")
+				h2 SIGN IN
+				ul
+					li.field
+						input(class="wide input dja-validate", name="dja-email", type="text", placeholder="EMAIL ADDRESS")
+					li.field
+						input(class="wide input dja-validate", name="dja-pass", type="text", placeholder="CONFIRM PASSWORD")
+						a(href="javascript:void(0)") FORGOT YOUR PASSWORD
+					a.signinSubmit.butnEntry(href="#close") 
+						span ENTER
+
+.modal.modal-3
+	span.modal-overlay
+	.modal-content						
+		.howItWorksModal#howItworks
+			.howItWorksModalContent
+				a.closeForm.close(href="#close")
+				.row
+					.eight.columns
+						h2 HOW IT WORKS
+						p Once you register for the sweeps, you’ll be on your way to helping the Sock family track down Edwin and find their Disney Side. The more you participate, the better your chances of winning a WALT DISNEY WORLD® vacation.
+						p Visit the site often to earn additional entries every week, just by:
+						ul
+							li Opting in to solve mobile clues
+							li Purchasing Hanes products
+							li Sharing the video and weekly vacation pics
+						p Just click the REGISTER button to get started!
+						a.butnEntry(href="#close") 
+							span REGISTER
+					.four.columns
+						//- .irwinPop
+						//- 	img(src="img/graphic-vacation-guide.png")
+
+.modal.modal-4
+	span.modal-overlay
+	.modal-content
+		.termsAndConditionsModal#termAndCondintions
+			.termsAndConditionsModalContent
+				a.closeForm.close(href="#close")
+				h2 terms and conditions
+				.copyContent#scrollable
+				h4 Hanes “Follow that Sock” Promotion Official Rules Standard data and text messaging charges may apply. No Purchase Necessary					
+					ol 
+						li Eligibility: The Hanes “Follow that Sock” Promotion (“Promotion”) is open to legal residents of the 50 United States and the District of Columbia who are 21 years of age or older as of date of entry. Employees, officers, directors of Hanesbrands Inc. (“Sponsor”), Don Jagoda Associates, Inc. (“Administrator”), Disney Destinations, LLC (“Disney”), and each of their respective parent companies, affiliates, subsidiaries, retailers, advertising and promotion agencies and judging organizations (collectively, the “Promotion Parties”), as well as their immediate family members (spouse, parents, children, siblings) and persons living under the same household (whether or not related) are not eligible to enter. This Promotion shall be construed and evaluated solely according to United States law and is void where prohibited and subject to all federal, state and local laws and regulations. By entering, you agree to these Official Rules and to all decisions of the Sponsor and Administrator. 
+						li How To Enter: Promotion begins 10:00 am Eastern Time (“ET”) April 24, 2015 and ends 4:00 pm ET June 8, 2015 (“Promotion Period”). There will be six weekly drawing periods as follows: The first weekly drawing period will begin at 10:00 am ET on April 24, 2015 and end at 11:59 pm ET May 3, 2015; all subsequent weekly drawing periods will begin each Monday at 12:00 am ET during the Promotion Period and end each Sunday at 11:59 pm ET during the Promotion Period, with the exception of the final weekly drawing period which will end at 4:00 pm ET on June 8, 2015. During the Promotion Period, visit www.hanes.com/followthatsock (“Website”) and complete all required fields of the on-screen registration form, including your e-mail address and a password, to receive one (1) registration entry into that weekly drawing period and any subsequent weekly drawing periods, if any.  Limit one (1) Website registration per person/email address for the entire Promotion Period.  The use of multiple identities and/or multiple e-mail addresses to create additional registrations for the same individual is prohibited and may result in disqualification of all entries by that individual, in Sponsor’s sole discretion.  You will use your e-mail address and password to log in the Website during the Promotion Period.  Participants are solely responsible for the security of their passwords. 
+						li There are five (5) different ways to receive additional entries during the Promotion Period, discussed below. You may use some, or all, or any combination of these to gain additional entries into the Promotion, subject to the limits described for each method below.
+						li After using your e-mail address and password to log in to your account on the Website, you will be prompted to share the Promotion video or the weekly Sock Family content on Facebook® or Twitter® via a unique link. If any of your friends or followers click on this link, that person will be directed to the Website, where he/she will be prompted to register for the Promotion. You will receive one additional entry for each friend (up to a maximum of 30) that clicks on your unique link and subsequently registers for the Promotion through your link (“Refer-a-Friend entry”) during the Promotion Period. Refer-a-Friend entries will be eligible for the weekly drawing period in which your friend enters the Promotion and any subsequent weekly drawing periods, if any. Limit thirty (30) Refer-a-Friend entries per person/email address/registered account for the entire Promotion Period across both social media platforms. 
+						li After using your e-mail address and password to log in to your account on the Website, you will be prompted to share the Promotion video or the weekly Sock Family content via email. You will receive one (1) additional entry per email share into the weekly drawing period during which you share the Promotion video or weekly Sock Family content via e-mail and any subsequent weekly drawing periods, if any.  Limit five (5) email-share entries per week per person/email address/registered account and limit thirty (30) email-share entries per person/email address/registered account for the entire Promotion Period. 
+						li Visit http://www.hanes.com/ and make a purchase through the website.  After your order is completed, you will receive a confirmation email from Hanes containing an “Order Number,” which will operate as a purchase confirmation code (“Code”) for purposes of this Promotion.  Then use your e-mail address and password to log on to the Website and enter the Code during the Promotion Period to receive one (1) additional entry into that weekly drawing period and any subsequent weekly drawing periods, if any.  Limit one (1) entry via Code (including Free Code discussed below) per person/e-mail address/registered account per day.  Please note that the e-mail associated with your Hanes.com purchase must match the e-mail used to register on the Website in order to earn your entry via this method.
+						li To get a Free Code without a purchase, log on to the Website using your e-mail address and password and click on the dashboard icon for entering Codes.  Click on the “Click Here” link in the “Don’t have a Code, click here” message, which will bring you to these Official Rules.  Click here to request a free Code. You will receive an email from Administrator with a Free Code within 24 hours of the request at the e-mail address associated with your registered account.  Then log back on to the Website and enter the Free Code during the Promotion Period to receive one (1) additional entry into that weekly drawing period and any subsequent weekly drawing periods, if any.  Limit one (1) entry via Code (whether purchase or Free) per person/e-mail address/registered account per day.
+						li When you register on the Website, or at any time during the Promotion Period, you may opt-in to receive MMS messages from the Sponsor to your cellular phone or a two-way text-messaging capable device (collectively, the "Device").  Twice per week during the Promotion Period, you will receive a text message asking if you want to help find Cousin Edwin Sock.  If you text back “Y” or “Yes,” you will receive a photo clue, via MMS, as to where Edwin is in the Walt Disney World® Resort. If you respond via text message with the correct answer about Edwin’s location, you will receive two (2) additional entries into that weekly drawing period and any subsequent weekly drawing periods, if any. If you respond via text message with an incorrect answer about Edwin’s location, you will receive one (1) additional entry into that weekly drawing period and any subsequent weekly drawing periods, if any.  Limit one guess and up to two (2) entries per person/e-	.notificationsModal.modalDialog#notifications
+			p Thank you for registering
+
+.modal.modal-5
+	span.modal-overlay
+	.modal-content
+		.initialModal#opening
+			.initialModalContent
+				a.closeForm.close(href="#close")
+				h2 Earn More Entries
+				p Every week, we’ll send you mobile texts with clues to Edwin’s current location. With every guess you submit, you’ll earn up two extra entries in the sweeps. Just submit your mobile number to get started!
+				form
+					input(type="text", class="medium input", placeholder="MOBILE NUMBER")
+					br
+					a.butnEntry(href="#close") 
+						span REGISTER
+					a.butnEntry(href="#close") 
+						span NO THANKS

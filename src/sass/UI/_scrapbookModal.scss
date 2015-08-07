@@ -1,0 +1,133 @@
+#scrapbookModal{
+
+	display:none;
+
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+
+	background-color:rgba(0,0,0,.8);
+	z-index:100;
+
+	.modal-scapbook{
+		position:absolute;
+		min-width:963px;
+		height:690px;
+		// border:5px solid #0f0;
+		left:50%;
+		top:50%;
+		transform: translate(-50%,-50%);
+
+		background-image:url(../img/bg-big-modal.png);
+		background-repeat:no-repeat;
+		background-size:fit;
+		box-sizing:border-box;
+
+		a.close{
+			position:absolute;
+			width:70px;
+			height:69px;
+			right:-10px;
+			top:-10px;
+			background-image:url(../img/close.png);
+		}
+		a.arrow{
+			position:absolute;
+			background-image:url(../img/sprite-buttons.png);
+			width:87px;
+			height:99px;
+			background-position: -40px -111px;
+			transform: translate(0,-50%);
+			top:50%;
+			left:-40px;
+			&:hover{
+				background-position: -147px -111px;
+			}
+			&.next{
+				transform: translate(0,-50%) rotate(180deg);
+				left:95%;
+			}
+		}
+
+		.image-scapbook{
+			position:absolute;
+			left:50%;
+			top:40%;
+			transform: translate(-50%,-50%) rotate(-1deg);
+			width:65%;
+			.corner{
+				position:absolute;
+				&.top{
+					background-image:url(../img/scrapbook/photo-corner.png);
+					left:-20px;
+					top:-20px;
+					z-index:101;
+					width:104px;
+					height:105px;
+				}
+				&.bottom{
+					background-image:url(../img/scrapbook/bottom-corner.png);
+					right:-32px;
+					bottom:-28px;
+					z-index:101;
+					width:134px;
+					height:119px;
+				}
+			}
+			img{
+				width:100%;
+				box-shadow: 1px 1px 20px rgba(0,0,0,.5);
+			}
+
+		}
+		.modal-footer{
+			position:absolute;
+			bottom:45px;
+			left:45px;
+			color:#fff;
+			p.copy{
+				width:45%;
+				padding-right: 20px;
+				font-weight: bold;
+				display: inline-block;
+				float:left;
+				font-size:1.5rem;
+				line-height: 120%;
+			}
+			ul.share{
+				width:50%;
+				display: inline-block;
+				float:left;
+				li{
+					display:inline-block;
+					float:left;
+					width:32%;
+					// border:1px solid #f00;
+					box-sizing:border-box;
+					margin-right:10px;
+					h3{
+						font-size:2.8rem;
+					}
+					&.button{
+						background-image:url(../img/sprite-social-buttons.png);
+						// border:1px solid #0f0;
+						width:77px;
+						height:77px;
+						cursor:pointer;
+					}
+					&.facebook{
+						background-position: -180px 0;
+					}
+					&.twitter{
+						background-position: -271px 0;
+					}
+					&.email{
+						background-position: -361px 0;
+					}
+				}
+			}
+		}
+	}
+}

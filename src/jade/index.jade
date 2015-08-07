@@ -1,0 +1,517 @@
+doctype html
+html(lang="en" ng-strict-di="true")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible",content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
+		link(rel='stylesheet', href='//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css')
+		link(rel='stylesheet', href='css/screen.css')
+		link(rel='shortcut icon', href='favicon.ico?v=2')
+		
+
+		title
+			| Hanes&reg; presents Follow That Sock!
+	// body here 
+	body
+		//- Scrabook Modal -----------------------
+		#scrapbookModal
+			.modal-scapbook
+				a(href="#").arrow.next
+				a(href="#").arrow
+				a(href="#").close
+				.image-scapbook
+					.corner.top
+					.corner.bottom
+					img(src="img/vacation_pics/hanes_edwin_mms_gallery_adventureland.jpg")
+				.modal-footer
+					p.copy
+						|Lorem ipsum dolor sit amet, postea medio cre scripserit te eam, nec sensibus malui sset intelle gat in, ei pri posse vocibus mentitum., ei his aliquip diceret. Minimum argu mentum instructior cum ei. Ex cum vide mundi epicuri.
+					ul.share
+						li
+							h3 Share Our Vacation Pics
+						li.button.facebook
+							a(href="#")
+						li.button.twitter
+							a(href="#")
+						li.button.email
+							a(href="#")
+
+		//- --------------------------------------
+		
+		.mask.close_modal
+		.topPanel
+			.header 
+				.row
+					.three.columns
+						.logo
+							a(href="javascript:void(0)")
+								img(src="img/logo-hanes.png", alt="Hanes Preents")
+					.push_three.six.columns
+						.miniNav
+							li 
+								a.headShop(href="javascript:void(0)") SHOP
+							li
+								a.headFacebook(href="javascript:void(0)")
+							li
+								a.headTwitter(href="javascript:void(0)")
+							li
+								a.headYoutube(href="javascript:void(0)")
+							li 
+								a.headSignIn.signMeIn.overlay-trigger(href="javascript:void(0)", data-overlay="signInForm") SIGN IN
+						.mobileNav
+							ul
+								li
+									a(href="javascript:void(0)") SHOP
+								li 
+									a(href="javascript:void(0)") REGISTER
+								li 
+									a(href="javascript:void(0)") SIGN IN
+								li
+									ul
+										li 
+											a.faceHead(href="javascript:void(0)")
+										li 
+											a.twitHead(href="javascript:void(0)")
+										li 
+											a.tubeHead(href="javascript:void(0)")
+
+
+
+
+			.videoPanel
+				.videoWrapper
+					.videoBorder
+						#main-video
+						iframe#main-iframe( width="560" height="315" src="https://www.youtube.com/embed/uF2i19XgWtc?version=3&enablejsapi=1&html5=1&rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen)
+						img.border(src="img/brd-video-all.png")
+						img.mobileBorder(src="img/brd-video-border-mobile.png")
+		.panel.entryPanel
+			// hide this row when ready to display final winners
+			.row
+				.four.columns
+					.descriptionContainer
+						.textureFill
+							h2 WIN A 
+								span(style="white-space:nowrap;") WALT&nbsp;DISNEY&nbsp;WORLD
+									span.superscript&reg;&nbsp;
+								|  VACATION FROM HANES
+								span.superscript&reg;&nbsp;
+						p Help the Sock family find their Disney Side as they track down cousin Edwin, the sock who loves getting lost. The more you participate, the better your chances of winning!
+							br
+							a.specialLink.overlay-trigger(href="javascript:void(0)", data-overlay="howItWorks") FIND OUT HOW
+				.eight.columns
+					.dashboardContainer
+						.signedOut<!-- sign in or register buttons, will launch modal forms -->
+							.registerButnContainer
+								h4 WANNA GET STARTED?
+								a.register.butnEntry.overlay-trigger(href="javascript:void(0)", data-overlay="regForm") 
+									span REGISTER
+							.signinButnContainer
+								h4 ALREADY JOINED THE ADVENTURES?
+								a.signin.butnEntry.overlay-trigger(href="javascript:void(0)", data-overlay="signInForm") 
+									span SIGN IN
+						.vertical.flip-container
+							//- FLIP STUFF BRO -----------------------------------
+							//-------------------------------------------------
+							.front
+								.dashboard
+									.accountInfo
+										.info
+											h3.dashName Hi, John!
+											p Here's how to earn entries this week:
+
+										ul.social
+											li <!-- these green checkmark state is a css class that gets appended to the a.class. it's called indicator. background positons are set. just add class --> 
+												a(class="dashSMS dashLink" href="#dashMMS")
+												span.tooltip Opt in to mobile clues
+											li 
+												a(class="dashHanesCode dashLink" href="#poNumber")
+												span.tooltip Enter Hanes&reg; Order Numbers
+											li 
+												a(class="dashFacebook" href="javascript:void(0)")
+												span.tooltip Share sweeps via Facebook
+											li 
+												a(class="dashTwitter" href="javascript:void(0)")
+												span.tooltip Share sweeps via Twitter
+											li 
+												a(class="dashEmail dashLink" href="#emailShare")
+												span.tooltip Email your friends
+									.entryCounter
+										.count 1
+							.back
+								.dashForms#dashMMS <!-- folding animation when user clicks related button from dashboard -->
+									a.closeDash.backToDash(href="#signedIn")
+									h3 Solve Clues via Mobile Texts and Earn More Entries
+									form
+										input(type="text", name="", placeholder="MOBILE NUMBER EX: 555-555-5555")
+										button.backToDash SUBMIT
+										.checkboxGroup
+											input(type="checkbox")
+											label By checking this box, I authorize Hanes to use an automated system to deliver up to two marketing text messages per week to the phone number I provided above during the Promotion. I understand that my consent to receive text messages is not required to earn an entry into the Promotion. I further understand that checking this box constitutes my signature. Standard Message & Data Rates May Apply.  Text STOP to [INSERT SHORT CODE] to cancel, text HELP to [INSERT SHORT CODE] for info. Terms of Use & Privacy Policy
+								.dashForms#poNumber(style="display:none")<!-- folding animation when user clicks related button from dashboard -->
+									a.closeDash.backToDash(href="#signedIn")
+									h3 HANES ORDER NUMBER
+									p.blurb Don’t have an Order Number? No purchase necessary. 
+										a.overlay-trigger(href="javascript:void(0)", data-overlay="termsAndConds") Click here 
+										| for Official Rules			
+									form
+										input(type="text", name="", placeholder="ORDER NUMBER EX: XXXXXXXXX")
+										button.backToDash SUBMIT
+									span.message NOTE: If you've already made a purchase at Hanes.com and received an Order Number, please be sure to register with the same email address that you used to make your purchase.  If you plan to make a purchase at Hanes.com, you will need to use the same email address for your purchase that you used to register with for the promotion.
+								.dashForms#emailShare<!-- folding animation when user clicks related button from dashboard -->
+									a.closeDash.backToDash(href="#signedIn")
+									h3 Share via Email
+									p.blurb Enter the email address(es) of the friends (up to five (5)) you’d like to tell about the sweeps!
+									form
+										input(type="text", name="", placeholder="EMAIL ADDRESS")
+										button.backToDash SUBMIT
+										span.message Separate multiple addresses with commas(,)
+						//-------------------------------------------------
+						//-------------------------------------------------
+			.row.weeklyWinners(style="display:none;") <!-- expands for weekly winners - no animations required-->
+				.winnersContent
+					.six.columns
+						.title
+							h2 Congratulations To our Winners!
+							p Every week Hanes is awarding another WALT DISNEY WORLD
+								span.superscript&reg; &nbsp; 
+								|vacation to one lucky family. Follow along as the Sock family tracks down cousin Edwin for your chance to win!
+					.push_two.four.columns
+						.winner
+							h3 RECENT WINNERS
+							h2 Nic S.
+							p Los Angeles, CA
+			.row.finalFiveWinners(style="display:none;")<!-- expands for final winners - no animations required-->
+				.six.columns
+					.title
+						h2 Congratulations To Our Winners!
+						p Every week  Hanes is awarding another WALT DISNEY WORLD® vacation to one lucky family. Follow along as the Sock family tracks down cousin Edwin for your chance to win!
+				.six.columns
+					.winners
+						ul
+							li KELLY K. 
+								span Boston, MA
+							li ALAN S.
+								span Seattle, WA
+							li Danielle R. 
+								span Los Angeles, CA
+							li Eric N.
+								span Miami, FL
+							li CAROLINE D.
+								span Chicago, IL							
+
+		.panel.familyBioPanel
+			.fam-row.row
+				.fam-column.irwinPopWrapper
+					//- .backgroundIcon
+						img(src="img/icon-mouse-pendant.png")
+					.irwinPopContainer
+						.irwinPop.animatable
+				.fam-column.descriptionContainer
+					.textureFill
+						h2
+							| MEET THE
+							br
+							| SOCK FAMILY
+					p They’re your average all-American family, only ankle-high. And though they have their differences, they’re just one lost sock away from a WALT<span class="invisible">..</span>DISNEY<span class="invisible">..</span>WORLD
+						span.superscript&reg; &nbsp;  
+						|vacation that brings them together like they never imagined. 
+				.fam-column.bios
+					#character-text
+						h1 COUSIN EDWIN
+						p The lovable little cousin visiting his Aunt, Uncle and cousins, who also just might’ve been the one who gave socks the reputation for getting lost.
+					canvas#characters(width=680 height=600)
+		.panel#scrapbookPanel
+			.row
+				.twelve.columns
+					.irwinHole
+						.irwin.animatable
+					.row.mainScrapbookContent
+						.nine.columns
+							.scrapbookContainer
+								.backgroundIcon
+									img(src="img/icon-pirate-hat.png")
+								.backgroundBook
+									img(src="img/bg-vacation-pics.png" class="bgScrapbook")
+									a#gallery-prev-arrow.prevArrow(href="javascript:void(0)")
+									a#gallery-next-arrow.nextArrow(href="javascript:void(0)")
+								.scrapbook<!-- this is the vacation pics gallery. it's super static so that copy can be updated on the fly. all images live on the page currently and a the modal is controlled through css. -->
+									ul.lb-album
+										li
+											.pic
+												.topLeftCorner
+													img(src="img/photo-corner-top-left.png")
+												.selfieBadge
+													img(src="img/badge-selfie.png")
+												.bottomRightCorner
+													img(src="img/photo-corner-bottom-right.png")
+												.topLeftCorner
+													img(src="img/photo-corner-top-left.png")
+												.selfieBadge
+													img(src="img/badge-selfie.png")
+												.bottomRightCorner
+													img(src="img/photo-corner-bottom-right.png")								
+												a#gallery-img1(href="#image-001" data-index="0")
+													img(src="img/vacation_pics/hanes_entertowin_gallery_opener.jpg")
+										li
+											.pic
+												.topLeftStrip
+													img(src="img/photo-strip-top-left.png")
+												.topRightCorner
+													img(src="img/photo-corner-top-right.png")
+												a#gallery-img2(href="#image-002" data-index="1")
+													img(src="img/vacation_pics/hanes_edwin_mms_gallery_Little_Mermaid.jpg")
+										li
+											.pic
+												.topRightCorner002
+													img(src="img/photo-corner-top-right.png")
+												.bottomLeftStrip
+													img(src="img/photo-strip-bottom-left.png")						
+												a#gallery-img3(href="#image-003" data-index="2")
+													img(src="img/vacation_pics/hanes_edwin_mms_gallery_Jungle_Book_Elephants.jpg")
+										li
+											.pic
+												.topLeftCorner002
+													img(src="img/photo-corner-top-left.png")
+												.bottomRightStrip
+													img(src="img/photo-strip-bottom-right.png")											
+												a#gallery-img4(href="#image-004" data-index="3")
+													img(src="img/vacation_pics/hanes_edwin_mms_gallery_thunder_mountain.jpg")
+									
+						.three.columns
+							.descriptionContainer
+								.textureFill
+									h2 OUR VACATION PICS
+									p The Sock family has been taking a bazillion pictures on their vacation. But here a few of their faves!	
+							.irwinPopWrapper<!-- irwin Animation -->
+								.irwinPopContainer
+									.irwinPop.animate
+									//- img(src="img/bg-stich-hole.png")
+		.panel.footer
+			.row
+				.seven.columns
+					ul
+						li
+							a.overlay-trigger(href="javascript:void(0)", data-overlay="termsAndConds")  OFFICIAL RULES
+						li
+							a(href="javascript:void(0)") PRIVACY POLICY							
+						li
+							a(href="javascript:void(0)") PRIZES
+						a.footerGuideLink(href="javascript:void(0)") VACATION PLANNING GUIDE
+					p 
+						| NO PURCHASE NECESSARY. Void where prohibited. Open to legal residents of the 50 U.S. &amp; D.C. who are at least 21 years old as of date of entry. Begins 10:00 a.m. ET 4/22/15; ends 11:59 p.m. ET 6/4/15. For complete Official Rules and eligibility, click here. Sponsor: Hanesbrands Inc.
+						br
+						br
+						| &copy; Disney
+
+				.five.columns
+					.footerGraphic
+						a(href="javascript:void(0)")
+							img(src="img/graphic-vacation-guide.png")
+
+		#howItWorks.overlay
+			.overlay-inner						
+				.howItWorksModal
+					.howItWorksModalContent
+						a.overlay-close(href="javascript:void(0)")
+						.row
+							.eight.columns
+								h2 HOW IT WORKS
+								p Once you register for the sweeps, you’ll be on your way to helping the Sock family track down cousin Edwin. The more you participate, the better your chances of winning a WALT DISNEY WORLD® vacation from Hanes so that your family can show their Disney side.
+								p Visit the site often to earn additional entries every week, just by:
+								ul
+									li Opting in to solve mobile clues
+									li Purchasing Hanes products
+									li Sharing the video and weekly vacation pics
+								p Just click the REGISTER button to get started!
+								a.backHome.butnEntry(href="#close") 
+									span REGISTER
+							.four.columns
+								//- .irwinPop
+								//- 	img(src="img/graphic-vacation-guide.png")
+
+		#regForm.overlay
+			.overlay-inner
+				form#dja-regform.validate-form.register(action="")
+					a.overlay-close(href="javascript:void(0)")
+					h2 REGISTER
+					ul
+						li.field.input-holder
+							input(class="medium input inputBg dja-validate", type="text", name="dja-fname", placeholder="FIRST NAME")
+							input(class="medium input dja-validate", type="text", name="dja-lname" placeholder="LAST NAME")
+						li.field.input-holder
+							input(class="medium input dja-validate", type="text", name="dja-email", placeholder="EMAIL ADDRESS")
+							select(name="under18" class="dja-validate")
+								option(value="Over 21") Age Group
+						li.field.input-holder
+							input(class="medium input dja-validate", type="text", name="dja-addr1", placeholder="ADDRESS 1")
+							input(class="medium input", type="text", name="dja-addr2", placeholder="ADDRESS 2")
+						li.field.input-holder
+							input(class="medium input dja-validate", type="text", name="dja-city", placeholder="CITY")
+						li.field.input-holder
+							select(name="dja-state", class="dja-validate")
+								option(value="AK") AK
+								option(value="CA") CA
+							input(class="short input dja-validate", type="text", name="dja-zip", placeholder="ZIP CODE")
+						li.field.input-holder
+							input(class="medium input dja-validate", type="text", name="dja-pass", placeholder="PASSWORD", required)
+							input(class="medium input dja-validate", type="text", name="dja-confimpass", placeholder="CONFIRM PASSWORD", required)
+					.checkboxGroup
+						ul
+							li
+								input(type="checkbox", id="dja-agreeRules", name="dja-agreeRules", class="required dja-validate") 
+								label I agree with contest 
+									a(href="javascript:void(0)") Rules and Conditions
+							li
+								input(type="checkbox" id="dja-optin1" name="dja-optin1")
+								label Yes I would like to receive emails and special offers from Hanes.com.
+							li
+								input(type="checkbox" id="dja-optin2" name="dja-optin2")
+								label Yes, please share my information with Disney Destinations, LLC and its affiliated and associated companies so that they may send me occasional updates, special offers, and other information about their products and services.
+					a.registerSubmit.butnEntry(href="javascript:void(0)") 
+						span SUBMIT	
+		#signInForm.overlay
+			.overlay-inner
+				form.signIn(id="dja-signInForm" action="")
+					a.overlay-close(href="javascript:void(0)", title="Close")
+					h2 SIGN IN
+					ul
+						li.field
+							input(class="wide input dja-validate", name="dja-email", type="text", placeholder="EMAIL ADDRESS")
+						li.field
+							input(class="wide input dja-validate", name="dja-pass", type="text", placeholder="PASSWORD")
+							a.specialLink(href="javascript:void(0)") FORGOT YOUR PASSWORD
+						a.signinSubmit.butnEntry(href="javascript:void(0)") 
+							span ENTER
+		#termsAndConds.overlay
+			.overlay-inner
+				.termsAndConditionsModal
+					.termsAndConditionsModalContent
+						a.overlay-close(href="#close")
+						h2 official rules
+						.copyContent#scrollable
+							h4 Hanes “Follow that Sock” Promotion Official Rules Standard data and text messaging charges may apply. No Purchase Necessary					
+							ol 
+								li 
+									span.listHead Eligibility: 
+									|  The Hanes “Follow that Sock” Promotion (“Promotion”) is open to legal residents of the 50 United States and the District of Columbia who are 21 years of age or older as of date of entry. Employees, officers, directors of Hanesbrands Inc. (“Sponsor”), Don Jagoda Associates, Inc. (“Administrator”), Disney Destinations, LLC (“Disney”), and each of their respective parent companies, affiliates, subsidiaries, retailers, advertising and promotion agencies and judging organizations (collectively the “Promotion Parties”), as well as their immediate family members (spouse, parents, children, siblings) and persons living under the same household (whether or not related) are not eligible to enter. This Promotion shall be construed and evaluated solely according to United States law and is void where prohibited and subject to all federal, state and local laws and regulations. By entering, you agree to these Official Rules and to all decisions of the Sponsor and Administrator. 
+								li 
+									span.listHead How To Enter: 
+									|   Promotion begins 10:00 am Eastern Time (“ET”) April 24, 2015 and ends 4:00 pm ET June 8, 2015 (“Promotion Period”). There will be six weekly drawing periods as follows: The first weekly drawing period will begin at 10:00 am ET on April 24, 2015 and end at 11:59 pm ET May 3, 2015; all subsequent weekly drawing periods will begin each Monday at 12:00 am ET during the Promotion Period and end each Sunday at 11:59 pm ET during the Promotion Period, with the exception of the final weekly drawing period which will end at 4:00 pm ET on June 8, 2015. During the Promotion Period, visit www.hanes.com/followthatsock (“Website”) and complete all required fields of the on-screen registration form, including your e-mail address and a password, to receive one (1) registration entry into that weekly drawing period and any subsequent weekly drawing periods, if any.  Limit one (1) Website registration per person/email address for the entire Promotion Period.  The use of multiple identities and/or multiple e-mail addresses to create additional registrations for the same individual is prohibited and may result in disqualification of all entries by that individual, in Sponsor’s sole discretion.  You will use your e-mail address and password to log in the Website during the Promotion Period.  Participants are solely responsible for the security of their passwords.
+									br
+									br
+									| There are five (5) different ways to receive additional entries during the Promotion Period, discussed below. You may use some, or all, or any combination of these to gain additional entries into the Promotion, subject to the limits described for each method below.
+									ol 
+										li After using your e-mail address and password to log in to your account on the Website, you will be prompted to share the Promotion video or the weekly Sock Family content on Facebook® or Twitter® via a unique link. If any of your friends or followers click on this link, that person will be directed to the Website, where he/she will be prompted to register for the Promotion. You will receive one additional entry for each friend (up to a maximum of 30) that clicks on your unique link and subsequently registers for the Promotion through your link (“Refer-a-Friend entry”) during the Promotion Period. Refer-a-Friend entries will be eligible for the weekly drawing period in which your friend enters the Promotion and any subsequent weekly drawing periods, if any. Limit thirty (30) Refer-a-Friend entries per person/email address/registered account for the entire Promotion Period across both social media platforms. 
+										li using your e-mail address and password to log in to your account on the Website, you will be prompted to share the Promotion video or the weekly Sock Family content via email. You will receive one (1) additional entry per email share into the weekly drawing period during which you share the Promotion video or weekly Sock Family content via e-mail and any subsequent weekly drawing periods, if any.  Limit five (5) email-share entries per week per person/email address/registered account and limit thirty (30) email-share entries per person/email address/registered account for the entire Promotion Period.
+										li Visit http://www.hanes.com/ and make a purchase through the website.  After your order is completed, you will receive a confirmation email from Hanes containing an “Order Number,” which will operate as a purchase confirmation code (“Code”) for purposes of this Promotion.  Then use your e-mail address and password to log on to the Website and enter the Code during the Promotion Period to receive one (1) additional entry into that weekly drawing period and any subsequent weekly drawing periods, if any.  Limit one (1) entry via Code (including Free Code discussed below) per person/e-mail address/registered account per day.  Please note that the e-mail associated with your Hanes.com purchase must match the e-mail used to register on the Website in order to earn your entry via this method.
+										li To get a Free Code without a purchase, log on to the Website using your e-mail address and password and click on the dashboard icon for entering Codes.  Click on the “Click Here” link in the “Don’t have a Code, click here” message, which will bring you to these Official Rules.  Click here to request a free Code. You will receive an email from Administrator with a Free Code within 24 hours of the request at the e-mail address associated with your registered account.  Then log back on to the Website and enter the Free Code during the Promotion Period to receive one (1) additional entry into that weekly drawing period and any subsequent weekly drawing periods, if any.  Limit one (1) entry via Code (whether purchase or Free) per person/e-mail address/registered account per day.
+										li When you register on the Website, or at any time during the Promotion Period, you may opt-in to receive MMS messages from the Sponsor to your cellular phone or a two-way text-messaging capable device (collectively, the "Device").  Twice per week during the Promotion Period, you will receive a text message asking if you want to help find Cousin Edwin Sock.  If you text back “Y” or “Yes,” you will receive a photo clue, via MMS, as to where Edwin is in the Walt Disney World® Resort. If you respond via text message with the correct answer about Edwin’s location, you will receive two (2) additional entries into that weekly drawing period and any subsequent weekly drawing periods, if any. If you respond via text message with an incorrect answer about Edwin’s location, you will receive one (1) additional entry into that weekly drawing period and any subsequent weekly drawing periods, if any.  Limit one guess and up to two (2) entries per person/e-mail address/registered account per clue.  Standard data and text messaging charges may apply. Administrator’s decisions about whether a guess is correct or incorrect are final and binding. If you don’t want the text with the photo clue on a given day, simply text back “N” or “No” in response to the text asking if you want to help.  You will still receive subsequent Promotion texts asking if you want to help.  If you have opted in to receive MMS messages, but then want to stop receiving any text messages related to this Promotion, simply text back “S” or “Stop” in response to the next Promotion text.
+									| Limit One Hundred Seven (107) entries total per person/e-mail address/registered account throughout the entire Promotion Period, regardless of method of entry or combinations of methods of entry.
+									br
+									br
+									| Automated entries are prohibited, and any use of such automated devices will cause disqualification, in Sponsor’s sole discretion. All entries, regardless of method of submission, must be complete to be eligible. All entries become the property of Sponsor and will not be returned. You may use your e-mail address and password to log in to your account at any time during the Promotion Period to see how many entries you have accumulated to date.
+								li 	
+									span.listHead Prizes and Approximate Retail Values (“ARV”)
+									|  Six (6) Grand Prize winners (one (1) Grand Prize winner per week) will each receive a 5-day/4-night vacation for winner and up to three (3) travel companions to the Walt Disney World® Resort near Orlando, Florida that includes:
+									ol.alpha 
+										li Round-trip coach-class air transportation for winner and three (3) guests between the major United States gateway airport closest to winner's residence (determined by Sponsor in its sole discretion) and the Orlando International Airport; provided, however, if winner resides within 250 miles of the Walt Disney World® Resort, air fare shall not be provided to the winner, but instead winner shall be provided ground transportation as selected by Sponsor in its sole discretion.  Winner will be responsible for any fees or additional costs, if any, associated with the travel including, but not limited to, up-charges for seat changes, food and beverage costs, and baggage charges.
+										li Round-trip ground transportation for the winner and three (3) guests between the Orlando International Airport and a Walt Disney World® Resort hotel; provided, however, if winner resides within 250 miles of the Walt Disney World® Resort, ground transportation between the airport and hotel shall not be provided to the winner.
+										li One (1) standard room in a “Moderate” category under Disney’s system of classification of its hotels (with a maximum of four (4) persons per room) for four (4) consecutive nights at the Walt Disney World® Resort, selected in Sponsor’s sole discretion. 
+										li Four (4) 5-Day Magic Your Way Tickets with Park Hopper® Option, one (1) each for the winner and three (3) guests and each of which provides the opportunity to visit any or all of the following theme parks which are located at the Walt Disney World® Resort on the same day: Magic Kingdom® Park, Epcot®, Disney’s Hollywood Studios®, and Disney’s Animal Kingdom® Park.
+										li One (1) Disney Gift Card, valued at five-hundred dollars ($500). The Disney Gift Card will not be replaced if lost, destroyed, or stolen. The Disney Gift Card is subject to all the terms and conditions generally applicable to the Disney Gift Card Program.
+										li One (1) Welcome Basket containing an assortment of Disney® branded items in the hotel room for the winner.  Items in each basket are at the sole discretion of Sponsor and are subject to availability. 
+									| Approximate retail value (“ARV”) of each Grand Prize is $5,965.00.  Actual value of Grand Prize may depend on city of departure, travel dates, market fluctuations, and other factors.  Any difference between the estimated value of the Grand Prize and the actual value will not be awarded to winner.  Limit one Grand Prize per person/household address. Odds of winning a Grand Prize depend on the number of eligible entries received as of each drawing date.
+									br
+									br
+									| Grand Prize winners are solely responsible for all costs and expenses of the Grand Prize not specified as included in these Official Rules, including but not limited to tips, gratuities, souvenirs, equipment rentals, laundry service, spa treatments, meals, alcoholic beverages, local and long-distance telephone calls, ground transportation between winner’s residence and the departure airport, parking, and other personal expenses.  Grand Prize (including, without limitation, air transportation and hotel accommodations) is subject to availability, black-out dates, and additional restrictions.  Travel arrangements must be booked through Sponsor at least 60 days prior to proposed travel dates.  Grand Prize must be completed before June 30, 2016, or Grand Prize will be forfeited in its entirety with no compensation or substitution of prize.  Winner and all guests must travel on same itinerary. Winner and guests are solely responsible for obtaining (and traveling with) valid identification and any other required documents.  Winner agrees to maintain his or her behavior and the behavior of all guests in accordance with all applicable laws and generally accepted social practices in connection with participation in any prize activity, including, without limitation, use of a prize.  Winner understands and agrees that Disney has certain rules and regulations, and that Disney has the right, in its sole discretion, to remove a prize winner (and/or his/her guests, if any) from any activity at any time if the winner’s (and/or his/her guests’, if any) behavior at any point is disruptive or may or does cause damage to person, property or otherwise violates the policies of Disney and, in that event, winner may be required to forfeit the rest or all of his/her prize, with no substitution or compensation. If winner elects to take Grand Prize with fewer than the allowed number of guests, components of the Grand Prize will be awarded in increments/quantities suitable for the actual number of travelers and winner will not receive any compensation or substitute/alternate prize for same. If any guest is a minor in his/her jurisdiction of residence, he/she must be accompanied on the trip by his/her parent or legal guardian, who must be either the winner or another guest of the winner.  All federal, state, local, and any other taxes associated with the prize are the sole responsibility of the winner, who will receive an IRS Form 1099 in the amount of $5965 at the appropriate time.  Grand Prize must be accepted with all listed prize components subject to the conditions indicated herein. No cash in lieu of prize.  No prize transfer or substitution allowed; however, Sponsor reserves the right in its sole discretion to substitute prize (or any prize component) with another prize/prize component of equal or greater value if advertised prize/prize component becomes unavailable for any reason.  Once scheduled, trip must be taken on dates and times arranged by Sponsor or Grand Prize will be forfeited in its entirety.  Changes are not permitted after air ticket issue.  Sponsor is not responsible for travel delays or cancellations.  There shall be no compensation or prize substitution if winner or guests are unable to take scheduled trip by reason of illness, family emergency, personal events, terrorism, labor strikes, weather, or other acts beyond Sponsor’s control.
+									br
+									br
+									| One Hundred (100) First Prize winners will each receive a Disney Vinylmation Figure.  The ARV of each First Prize is $12.95.    Two Hundred Fifty (250) Second Prize winners will each receive a Limited Edition Disney/Hanes® Pin.  The ARV of each Second Prize is $12.00.  The character, size, color, scene, and other details of the Disney Vinylmation Figures and Limited Edition Disney/Hanes® Pins are in the sole discretion of Sponsor and are subject to availability. Odds of winning a First Prize or Second Prize depend on the total number of eligible entries received during the Promotion Period.  The total ARV of all prizes is $40,085.  Limit one (1) Grand Prize and one (1) First or Second Prize per person/email address/registered account.
+								li 
+									span.listHead Random Drawings and Winner Notification: 
+									|  The Grand Prize winners will be selected in weekly random drawings, from among all eligible entries received as of the end of each weekly period as defined above. Weekly drawings will be conducted on or about the Monday following the Sunday close of each weekly period, except that the last weekly drawing will be conducted on Tuesday following the Monday close of the Promotion Period. The First Prize and Second Prize winners will be selected on or about June 9, 2015, from among all eligible entries received during the entire Promotion Period. Drawings will be conducted by the Administrator, an independent judging organization whose decisions are final on all matters relating to this Promotion. Potential Grand Prize winners will be notified by email and/or mail within three (3) business days of the drawing. Each Grand Prize winner will be required to sign and return an Affidavit of Eligibility and Liability/Publicity Release (where legal) and an IRS form W-9 to Administrator within ten (10) days following the date of issuance, which will be sent via email or USPS Priority Mail, in order to claim the prize.  If the e-mail notification is returned as non-deliverable, or if potential winner fails to sign and return the required documentation to claim the prize within the required deadline, or if a potential winner is found to be ineligible or not in full compliance with these Official Rules, or if a potential winner declines the prize for any reason, then that potential winner will be disqualified and the prize will be forfeited.  If forfeiture occurs during the process of confirming a winner and awarding the prize, then Sponsor will select an alternate winner from among remaining eligible entries for the applicable weekly period in order to award the prize.  If, however, forfeiture occurs after the prize has been awarded and confirmed, Sponsor has no obligation to select and award the prize to an alternate winner. Each guest of winner (if a minor in his/her jurisdiction of residence, his/her parent or legal guardian) must also complete, sign and return a Liability Release and, where lawful, a Publicity Release at least 60 days prior to travel and before any travel arrangements will be made.  If these documents are not returned on a timely basis, guests will not be allowed to accompany winner on the trip.  First Prize and Second Prize winners will receive their prizes via first class mail at the address provided in the registration within six to eight weeks following the end of the Promotion Period.  Returned prizes will not be awarded.
+								li 
+									span.listHead General Rules: 
+									|  By participating, you (a) agree that the Promotion Parties, Facebook, Twitter, and their respective officers, directors, employees and agents shall have no liability whatsoever for, and shall be indemnified and held harmless by participants against, any liability for any injuries, losses or damages of any kind to person(s), including, without limitation, death, or property, resulting in whole or in part, directly or indirectly, from participation in this Promotion or any Promotion-related activities, or from acceptance, use, or misuse of any prize or prize-related activity; and (b) acknowledge that those parties have neither made nor are in any manner responsible for any warranty, representation or guarantee, express or implied, in law or in fact, relative to the prizes and/or any prize components, including but not limited to, their quality, merchantability or fitness for the intended purpose; and (c) agree that acceptance of a prize constitutes your permission (which will be confirmed in writing upon request) for Sponsor, and those acting pursuant to the Sponsor’s authority, to use your name, photograph, likeness, voice, image, statements and biographical information for advertising, trade, publicity and promotional purposes worldwide and in all forms of media now known or hereafter developed, including the World Wide Web, in perpetuity, without further compensation, and without limitation, unless prohibited by law, and without notice, review or approval.
+									br
+									br
+									| The Promotion Parties are not responsible for illegible, garbled, lost, late, incomplete, stolen, misdirected, undeliverable registrations, entries, social media or e-mail share links, free Code requests, email, MMS or SMS text messages, or other electronic or mobile communications; or for any computer, programming, telephone, satellite, cable, network, electronic or Internet hardware or software malfunctions, failures, connections, or availability, or garbled, corrupt or jumbled transmissions, service provider/Internet/web site/use net/cellular accessibility, availability, or traffic congestion, or any technical error, or unauthorized human intervention, or the incorrect or inaccurate capture of registration information, Code submission information or other entry information,  or the failure to capture, or loss of, any such information. Sponsor and Administrator are not responsible for any malfunction, defect or error, whether human or technical in nature, affecting the administration of the Promotion. Neither Sponsor nor Administrator is responsible for any incorrect or inaccurate information, whether caused by web site users, tampering, hacking, or by any of the equipment or programming associated with or utilized in the Promotion and assume no responsibility for any error, omission, interruption, deletion, defect, delay in operation or transmission, communications line failure, technical error, theft or destruction or unauthorized access to the Website. The right is reserved by Sponsor and/or Administrator, at their sole discretion, to disqualify any individual found, at their sole discretion, to be tampering with the operation of the Promotion or the Website, to be acting in violation of these Official Rules and/or in any manner determined by Sponsor and/or Administrator in their sole discretion as intended to defraud Sponsor/ Administrator; or to be acting in a non-sportsmanlike or disruptive manner, or with intent to annoy, abuse, threaten or harass any other person. Any use of robotic, automatic, macro, programmed or like methods to participate in the Promotion will void any attempted participation effected by such methods and disqualification of participant utilizing same (the foregoing includes but is not limited to commercial promotion subscription “clubs”, service web sites and like organizations); all registration, submission of Codes, entry into the Promotion, and other participation in the Promotion must be key-stroked by hand. Disqualification will result in all entries by such participant being voided without liability of any kind; and, Sponsor and Administrator may take any other actions deemed necessary in their sole discretion so as to protect their rights. Neither Sponsor nor Administrator is responsible for injury or damage to participants' or to any other person's computer or mobile device related to or resulting from participating in this Promotion or downloading materials from the Website or use of the Website. 
+									br
+									br
+									| If, for any reason, the Promotion is not capable of running as planned by reason of, but not limited to, infection by computer virus, worms, bugs, tampering, unauthorized intervention, fraud, technical failures, or any other causes which Sponsor, in its sole opinion, deems could corrupt or affect the administration, security, fairness, integrity or proper conduct of this Promotion, Sponsor reserves the right at its sole discretion to cancel, terminate, modify or suspend the Promotion or proceed with the Promotion in a manner deemed by Sponsor in its sole discretion to be fair, appropriate and consistent with the spirit of these Official Rules.  Notice of such action by Sponsor will be posted on the Website.
+									br
+									br
+									| In case of dispute, participation in Promotion will be declared to be effected by (and all materials associated with such participation in Promotion to be the sole property of) the authorized account holder of the email address used to register for the Promotion. “Authorized account holder” is defined as the natural person who is assigned to an email address by an Internet Access Provider, Online Service Provider, or other organization (e.g., business, educational institution, etc.) that is responsible for assigning email addresses for the domain associated with the submitted email address.   Sponsor and Administrator are not responsible for any typographical or other error in the printing of the offer, administration of the Promotion or in the announcement of any prize.  These Official Rules are intended solely for the personal use of an individual participant and may be reproduced only once for his/her personal use.
+									br
+									br
+									| If you elect to receive occasional updates, special offers and other information from Disney and its affiliated and associated companies about their products and services, your information may be shared with those companies. 
+
+								li 
+									span.listHead Dispute Resolution: 
+									|  Except where prohibited by law, participants agree that: (a) any and all disputes, claims, and causes of action arising out of or connected with these Official Rules or this Promotion (and/or the rights and obligations of Sponsor and/or participant in conjunction therewith) (collectively, “Disputes”) shall be resolved individually, without resort to any form of class action, and exclusively by an action; (b) any and all Disputes (excluding, for this purpose, any and all Disputes in any way related to the Grand Prizes, the First Prizes and the Second Prizes) shall be resolved in state or federal court in the State of North Carolina; (c) any and all Disputes in any way related to the Grand Prizes, the First Prizes and the Second Prizes shall be resolved in state or federal court in the State of Florida; (d) any and all claims, judgments and awards shall be limited to actual out-of-pocket costs incurred, including costs associated with participating in this Promotion but in no event attorneys' fees; (e) under no circumstances will participant be permitted to obtain awards for and participant hereby waives all rights to claim punitive, incidental and consequential damages and any other damages, other than for actual out-of-pocket expenses, and any and all rights to have damages multiplied or otherwise increased; and (F) THEY WAIVE AND HEREBY DO WAIVE THEIR RIGHT TO A TRIAL BY JURY IN ANY SUCH ACTION.  
+								li 
+									span.listHead No Waiver: 
+									|  The invalidity or unenforceability of any provision of these Official Rules shall not affect the validity or enforceability of any other provision. In the event that any provision is determined to be invalid or otherwise unenforceable or illegal, these Official Rules shall otherwise remain in effect and be construed in accordance with their terms as if the invalid or illegal provision were not contained herein. 
+								li 
+									span.listHead Winners List: 
+									|  For the names of the Grand Prize winners after June 15, 2015, visit www.hanes.com/followthatsock, or mail a self-addressed stamped envelope to: Follow that Sock Promotion Winners, 1000 East Hanes Mill Road, Winston-Salem, NC 27101.  Winners list requests must be received between June 8 and July 31, 2015.  Requests received outside this period will not be processed.  Please allow 6 to 8 weeks for delivery of winners list.
+								li 
+									span.listHead Sponsor/Administrator: 
+									|  The Sponsor is Hanesbrands Inc., 1000 East Hanes Mill Road, Winston- Salem, NC 27105. The Administrator is Don Jagoda Associates, Inc., 100 Marcus Drive, Melville, NY 11747.
+									br
+									br
+									| This Promotion is in no way sponsored, endorsed or administered by, or associated with, Facebook® or Twitter®. Twitter® is not involved in any way other than as one medium through which this Promotion is conducted. Facebook® and Twitter® are registered trademarks of Facebook, Inc. and Twitter, Inc., respectively.   Any questions or complaints regarding this Promotion shall be directed to Hanesbrands Inc., not Facebook® or Twitter®.  You understand that you are providing your information to Hanesbrands Inc. and not to Facebook® or Twitter®.
+
+		#oneTimePrompt.overlay
+			.overlay-inner
+				.oneTimePromptModal
+					.oneTimePromptModalContent
+						a.closeForm.close(href="#close")
+						h2 Earn More Entries
+						p Every week, we’ll send you mobile texts with clues to Edwin’s current location. With every guess you submit, you’ll earn up two extra entries in the sweeps. Just submit your mobile number to get started!
+						form
+							input(type="text", class="medium input", placeholder="MOBILE NUMBER")
+							br
+							a.butnEntry(href="#close") 
+								span REGISTER
+							a.butnEntry(href="#close") 
+								span NO THANKS
+		// modal for error message and other dynamic text
+		#dynamicNotifications.overlay
+			.overlay-inner
+				.notificationsModal
+					.notificationsContent
+						h2 Notification header
+						p Notification copy
+
+		// modal for error message and other dynamic text
+		#forgotPassword.overlay
+			.overlay-inner
+				.passwordModal
+					.passwordModalContent
+						form.signIn(id="dja-signInForm" action="")
+							a.overlay-close(href="javascript:void(0)", title="Close")
+							h2 SIGN IN
+							ul
+								li.field
+									input(class="wide input dja-validate", name="dja-email", type="text", placeholder="EMAIL ADDRESS")
+								li.field
+									input(class="wide input dja-validate", name="dja-pass", type="text", placeholder="PASSWORD")
+									a.specialLink(href="javascript:void(0)") FORGOT YOUR PASSWORD
+								a.signinSubmit.butnEntry(href="#close") 
+									span ENTER
+
+
+
+		script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+		srcipt(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js")
+		script(type="text/javascript", src="https://code.createjs.com/easeljs-0.8.0.min.js")
+		script(type="text/javascript", src="https://code.createjs.com/tweenjs-0.6.0.min.js")
+		//- script(type='text/javascript', src='//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js')
+		script(type='text/javascript', src='bin/js/hammer.min.js')
+		script(type='text/javascript', src='bin/js/jquery.hammer.js')
+		script(type='text/javascript', src='js/app.js')
+		script(type='text/javascript', src='bin/js/dja.js')
+
+

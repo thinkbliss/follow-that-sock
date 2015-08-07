@@ -1,0 +1,612 @@
+
+    .mobileNav {
+        transition:all .25s;
+        position:absolute;
+        top:10px;
+        left:84%;
+        height:40px;
+        width:40px;
+        z-index:1;
+        cursor:pointer;
+        background: transparent url(../img/icon-hamburger.png) no-repeat 0 0;
+        ul {
+            transition:all .05s;
+            position:fixed;
+            left:-9000px;
+        }
+    }
+    .menu{
+        position: fixed;
+        transition:all .25s;
+        text-align:center;
+        line-height:200px;
+        height:100%;
+        width:100%;
+        border-radius:0px;
+        top:0;
+        left:0;
+        background: transparent url(../img/bg-mobile-nav.png) repeat-x 0 0;
+        ul {
+        transition:all .05s;
+        position:relative;
+        left:0;
+        z-index:2;
+            li {
+                ul {
+                    padding-top: 20px;
+                    left: 19%;
+                    li { 
+                        float: left;
+                        a { 
+                            width: 82px;
+                            height: 78px;
+                            display: block;
+                            background: transparent url(../img/sprite-social-buttons.png) no-repeat 0 0; 
+                        }
+                        a.faceHead { background-position: -181px 0; border-bottom: 0; }
+                        a.twitHead { background-position: -270px 0; border-bottom: 0; }
+                        a.tubeHead { background-position: -359px 0; border-bottom: 0; }
+                     }
+                }
+            }
+            li:last-child { border-bottom: 0; }
+        }
+        &:after { 
+            content: url('../img/icon-hamburger.png');
+            position: absolute;
+            top: -53px;
+            left: 86%;
+        }
+        a {
+        padding: 20px 0;
+        font: 100 18px $Monstro;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        display: block;
+        border-bottom: rgba(255, 255, 255, 0.2) 1px solid;
+            &:hover {
+            transition:all .15s;
+            letter-spacing:2px;
+            border:1px solid rgba(255,255,255,.15);
+            }
+        }
+    }
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+    // hidden from large screens
+    .miniNav { display: none !important; }
+    .border, .irwinPopWrapper, .characterWrapper { display: none !important; }
+    .irwinHole { display: none; }
+    .footerGraphic { display: none; }
+   .topPanel .videoPanel .videoWrapper #video-play-button {
+        // width: 116px;
+        // height: 86px;
+        // top: 55%;
+        // left: 44%;
+        // background-position: 30px 100px;
+        display: none !important;
+    }
+    .topPanel .videoPanel .videoWrapper #video-play-button:hover { background-position: 0px 100px; }
+
+
+    .dashboardContainer .flip-container { margin-left: 0 !important; }
+
+    // generic overrides
+    h2 { font-size: 3.375rem !important; }
+    input.medium, input.wide { height: 30px; }
+    .butnEntry { min-width: 120px; margin-top: -51px !important; padding: 18px 16px 24px; position: relative; display: inline-block; background: transparent url(../img/bg-form-butn-mobile.png) no-repeat 0 0; background-size: 100%; font-size: 1.6rem; }
+    .descriptionContainer { 
+        margin: 20% 0 0 0 !important;
+        h2 { text-align: center; -webkit-transform: rotate(-2deg); }
+        p { text-align: center; }
+        .textureFill { -webkit-transform: rotate(0deg) !important; }    
+    }
+    .overlay-close { background-size: 66% !important; }
+    
+    .topPanel{
+        margin-bottom: -40.1%;
+        background-size: 100%;
+        .header { 
+            .logo { width: 38%; }
+            position: relative;
+            top: 15px;
+        }
+        .videoPanel { 
+            .videoWrapper { 
+                position: relative;
+                top: -50px;
+                .videoBorder {
+                    .mobileBorder {
+                        position: relative;
+                    }
+                    #main-video {
+                        width: 100%;
+                        height: 54%;
+                        display: none;
+                    }
+                    #main-iframe {
+                        top: 59.2%;
+                        left: 49.9%;
+                    }
+                    display: block !important;
+                }
+            } 
+        }
+    }
+    .entryPanel {
+         background-image: none,none,url(../img/bg-entry-panel.png);
+        .row {
+            padding: 0 10px;
+            box-sizing: border-box;
+            .dashboardContainer {
+                padding-left: 2%;
+                input[type="text"], input[type="email"] { width: 90%; height: 37px; }
+                button { padding: 12px; }
+                h3 { 
+                    font-size: 2.4rem; 
+                }
+                .signedOut {
+                    .butnEntry { 
+                        margin: 0 !important; 
+                        padding-top: 16px;  
+                        padding-left: 7px;
+                        padding-right: 9px;
+                        float: right; 
+                    }
+                    h4 { width: 50%; font-size: 2rem;  text-align: right; }
+                    .registerButnContainer { 
+                        margin: 0 !important;
+                        h4 { padding-top: 40px; padding-left: 1%; transform: rotate(-1deg) !important; }
+                        .butnEntry { margin-top: -40px !important; }
+                     }
+                    .signinButnContainer { 
+                        margin: 0 !important;
+                        h4 { margin-top: 20px; }
+                        .butnEntry { margin-top: -40px !important; }
+                     }
+                }
+                .dashboard {
+                    padding: 20px 26px !important;
+                    background: url(../img/bg-mobile-dash.png) no-repeat 0 0;
+                    background-size: 100%;
+                    .accountInfo {
+                        .info {
+                            p { margin: 30px 0 !important; font-size: 1.5rem; } 
+                        }
+                    }
+                    .entryCounter {
+                        width: 100%;
+                        background-size: 69% !important;
+                        position: relative;
+                        left: 15%;
+                        top: 108px;
+                        background: url(../img/bg-mobile-entries.png)no-repeat; 
+                        text-align: left;
+                        .count {
+                            left: 38%;
+                            top: 13%;
+                            font-size: 3rem;
+                        }
+                        .entry {
+                            p {
+                                position: absolute;
+                                top: 14px;
+                                left: 87px;
+                                font-size: 2rem;
+                            }
+                        }
+                        p.blockText { display: none; }
+                        p { font-size: 1.3rem; }
+                    }
+                }
+                .dashForms {
+                    padding: 30px 25px;
+                    background: url(../img/bg-mobile-dash.png)no-repeat;
+                    background-size: 100% 100%;
+                    form { 
+                        margin-top: 0 !important; 
+                        label { margin-left: 24px !important; }
+                    }
+                    &#dashMMS { 
+                        padding-bottom: 100px;
+                        button { position: absolute; top: 83%; left: 30%; }
+                    }                    
+                    .signedIn {
+                        padding: 0 !important;
+                        background: url(../img/bg-mobile-dash.png)no-repeat center 0;
+                        .accountInfo { 
+                            p {}
+                            ul.social {
+                                li {  }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    .row.weeklyWinners { 
+        padding: 0 10px !important;
+        box-sizing: border-box;
+        margin-top: 0 !important; 
+        text-align: center; }
+    }
+    .familyBioPanel {
+        padding: 0 10px 90% 10px;
+        box-sizing: border-box;
+    }
+
+    #scrapbookPanel {
+        margin-top: -21px;
+        padding: 0 !important;
+        position: relative;
+        .descriptionContainer { 
+            margin: 0 !important; 
+            position: absolute;
+            top: 42px;
+            p { 
+                width: 100% !important; 
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+            .textureFill {
+                h2 { width: 100% !important; }
+            }
+        }
+        .mainScrapbookContent {  
+            margin-top: 0 !important;
+            .scrapbookContainer { 
+                height: 240px !important;
+                overflow: hidden;
+                #gallery-prev-arrow, #gallery-next-arrow { display: none !important; }
+                .bgScrapbook { display: none; }
+                .scrapbook {
+                    width: 292px;
+                    position: absolute;
+                    top: 43px;
+                    left: 0;
+                    .lb-album {
+                        width: 900px;
+                        position: absolute;
+                        margin: 0 !important;
+                        position: relative; 
+                        top: 100px; 
+                        z-index: 1000;
+                        li { 
+                            width: 15%;
+                            .pic { margin: 3% !important; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .overlay-inner {
+        margin: 0 !important;
+        padding: 0 !important;
+        form.register { 
+            min-width: 90% !important;
+            margin-top: 30px;
+            margin-left: 0;
+            padding: 20px 20px 50px 20px; 
+            background: transparent url(../img/bg-mobile-registration.png) no-repeat center 0; 
+            background-size: 90%;
+            .overlay-close { margin-left: 77%; top: 0 !important; }
+        }
+        form.signIn {
+            min-width: 90% !important;
+            margin-top: 30px;
+            margin-left: 0;
+            padding: 20px; 
+            background: transparent url(../img/bg-mobile-signin.png) no-repeat center 0; 
+            background-size: 90%;
+            .overlay-close { margin-left: 77%; top: 0 !important; }
+        }
+        .howItWorksModal {
+            background: transparent url(../img/bg-mobile-how.png) no-repeat center 0 !important;
+            background-size: 90% !important;
+            .howItWorksModalContent {
+                min-width: 75%;
+                padding: 27px 100px 31% 49px;
+                background: none;
+                background-size: 90% !important;
+                p, li { font-size: 1.3rem; }
+                .butnEntry {
+                    padding: 16px 0;
+                    position: relative !important;
+                    top: 44% !important;
+                    left: 28%;
+                }
+                .overlay-close { 
+                    margin: -73px 0 0 67%; 
+                    top: 103px;
+                }
+            }
+        }
+        .termsAndConditionsModal {
+            background: transparent url(../img/bg-mobile-terms.png) no-repeat center 0 !important;
+            background-size: 90% !important;
+            .termsAndConditionsModalContent {
+                min-width: 75%;
+                padding: 27px 100px 31% 49px;
+                background: none;
+                background-size: 90% !important;
+                p, li { font-size: 1.3rem; }
+                .butnEntry {
+                    padding: 16px 0;
+                    position: absolute !important;
+                    top: 78% !important;
+                    left: 32%;
+                }
+                .overlay-close { 
+                    margin: -73px 0 0 67%; 
+                    top: 103px;
+                }
+            }
+        }
+    }
+
+
+    .copyContent { 
+        min-width: 70%; 
+        height: 500px; 
+        padding-right: 20px; 
+        overflow-y: scroll; 
+        max-height: 56%; 
+        #scrollable {
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                border-radius: 10px;
+                background-color: #F5F5F5;
+                }
+            &::-webkit-scrollbar {
+                width: 12px;
+                background-color: #F5F5F5;
+                }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+                background-color: #555;
+            }
+        }
+    }
+
+    #scrapbookModal {
+        min-width: 300px;
+        .modal-scapbook {
+            min-width: 90%; 
+            top: 35% !important;
+            background-image: url(../img/bg-mobile-gallery-modal.png);
+            background-size: 100%;
+            background-position: 0px 178px;
+            a.arrow { display: none; }
+            a.close { top: 152px; right: -18px; }
+            .image-scapbook {
+                width: 73%;
+                top: 42%;
+                .corner {
+                    &.bottom { 
+                        display: none;
+                    }
+                    &.top {
+                        display: none;
+                    }
+                }
+            }
+            .modal-footer { 
+                bottom: 150px !important;
+                p.copy { 
+                    width: 90%;
+                    font-size: 1rem;
+                    float: none; 
+                }
+                ul.share { 
+                    width: 99%;
+                    float: none; 
+                    h3 { font-size: 2.2rem !important; }
+                    li { height: 60px !important; }
+                    li:first-child { width: 71% !important; }
+                    li.button { 
+                        width: 25%; 
+                        background-size: 513%;
+                        height: 58px !important;
+                        &.facebook { background-position: -119px 0; }
+                        &.twitter { background-position: -183px 0; }
+                        &.email { background-position: -556px 0; }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // clean up the mess below
+    #character-text { max-width: 204px; position: relative; top: 183px; left: 53px; text-align: center; }
+    #character-text h1 { margin-bottom: .5rem !important;  padding-bottom: 0 !important; font-size: 2.5rem !important; }
+    #character-text p { font-size: 1rem !important; }
+    form.register .close, form.signIn .close  { margin-left: 245px; }
+    form.register .input.medium, form.signIn .input.medium { width: 80%; }
+    form.register label { margin-top: -14px; margin-left: 36px;  }
+    input[type="checkbox"]:before { width: 21px; height: 20px; background-size: 176%;  background: none;  }
+    input[type="checkbox"]:checked:before { background-position: -21px -1px; }
+    form.register .checkboxGroup { padding: 20px 20px 0 0; }
+    .row { padding: 0; }
+    h1.logo { max-width: 114px; position: relative; top: -16px; left: 10px; }
+    
+
+    
+    .familyBioPanel .bios { width: 100%; }
+    .familyBioPanel .descriptionContainer { width: 100%; }
+    
+    .signedIn { background: transparent url(../img/bg-mobile-dashboard.png) no-repeat 0 0; }
+    form.register select, form.signIn select { width: 97%; height: 40px; }
+    .scrapbook ul { padding-top: 0 !important; z-index: 1000; }
+    
+    .footer { padding-bottom: 20px; text-align: center; }
+    .footer ul {  }
+    .footer ul li { padding-right: 29px; }
+    .footer ul li, .footer a { font-size: 1rem; }
+    .footer p { font-size: .8rem !important; line-height: 1rem; }
+    
+    a.footerGuideLink { margin-top: 20px; display: block !important; }
+    .backgroundIcon { display: none; }
+    span.superscript { margin-top: -7px; }
+    .butnEntry:hover { background-position: 3px -2px;}
+    .modalDialog>div { padding: 24px 46px !important; }
+    .modalDialog>div h2 { padding-bottom: 10px; font-size: 3.4rem; line-height: 3.3rem; }
+    .modalDialog>div p, .modalDialog>div li { font-weight: 900; font-size: 1.2rem !important; line-height: 1.4rem; }
+    .modalDialog>div p { padding-bottom: 10px !important; }
+    .modalDialog .close { top: 2%!important; left: 85% !important; }
+
+
+    .initialModalContent {
+        background: transparent url(../img/bg-mobile-prompt.png) no-repeat center 0 !important;
+        background-size: 90% !important;
+        a.registerButn {
+        position: relative;
+        left: 15%;
+        top: 10px;
+        }
+        a.noThanksButn {
+        position: relative;
+        left: 15%;
+        top: 29px;
+        }
+    }
+
+    form.register .close, form.signIn .close { left: 20px !important; }
+    form.register h2, form.signIn h2 { margin-left: 0 !important; padding: 0 20px 10px;; font-size: 3.4rem !important; }
+
+    form.signIn .field a { top: 18px; font-size: 1.2rem; text-decoration: underline; text-align: center; }
+    form.signIn { 
+        .butnEntry { 
+            top: 52px !important; 
+            left: 20% !important; 
+        } 
+    }
+    form.register ul li{  margin-top: 0 !important; }
+    form.register input[type="text"] { height: 30px; margin-bottom: 8px; }
+    form.register select { margin-bottom: 15px; }
+    form.register li:nth-child(5) select { width: 43%; }
+    form.register .input.short, form.signIn .input.short { width: 36%; margin-right: 0; }
+    a.registerSubmit { position: relative; top:  50px; left: 20%; }
+}
+
+
+@media only screen and (min-width: 375px) and (max-width: 414px) {
+    .fam-row {
+        overflow: visible !important;
+        .fam-column {
+            float: none;
+            top: 146%;
+        }
+    }
+    .dashboard {
+        ul.social {
+            top: 85px;
+            li {
+                margin-right: 1px !important;
+                a {
+                    background-size: 600% !important;
+                    background:url(../img/sprite-social-buttons-ipad.png) no-repeat 0 0;
+                    width:94% !important;
+                    display:block;
+                    &.dashHanesCode{
+                        background-position:-65px 0px;
+                    }
+                    &.dashFacebook{
+                        background-position:-129px 0px;
+                    }
+                    &.dashTwitter{
+                        background-position:-194px 0px;
+                    }
+                    &.dashEmail{
+                        background-position:-259px 0px;
+                    }
+                }
+            }
+        }
+    }
+    .modal-footer { 
+        bottom: 150px !important;
+        p.copy { 
+            width: 90%;
+            font-size: 1rem;
+            float: none; 
+        }
+        ul.share { 
+            width: 99%;
+            float: none; 
+            h3 { font-size: 2.2rem !important; }
+            li { height: 67px !important; }
+            li:first-child { width: 71% !important; }
+            li.button { 
+                width: 25%; 
+                background-size: 504% !important;
+                &.facebook { background-position: -150px 0 !important; }
+                &.twitter { background-position: -216px 0 !important; }
+                &.email { background-position: -661px 0 !important; }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+    .fam-row {
+        overflow: visible !important;
+        .fam-column {
+            float: none;
+            top: 136%;
+        }
+    }
+
+    .dashboard {
+        ul.social {
+            top: 118px;
+            li {
+                margin-right: -10px !important;
+                a {
+                    background-size: 600% !important;
+                    background:url(../img/sprite-social-buttons-ipad.png) no-repeat 0 0;
+                    width:73% !important;
+                    height:73% !important;
+                    display:block;
+                    &.dashHanesCode{
+                        background-position:-53px 0px !important;
+                    }
+                    &.dashFacebook{
+                        background-position:-104px 0px !important;
+                    }
+                    &.dashTwitter{
+                        background-position:-157px 0px !important;
+                    }
+                    &.dashEmail{
+                        background-position:-461px 0px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 320px) {
+	font-size: 1em;
+	// .videoBorder { display: none; }
+}
+
+
+@media only screen and (min-width: 415px) {
+    .mobileBorder { display: none; }
+    .mobileHeader { display: none; }
+    .mobileNav { display: none; }
+  
+}
+@media only screen and (min-width: 414px) {
+    li.button { height: 61px !important; }
+}
+
